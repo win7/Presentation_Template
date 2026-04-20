@@ -26,6 +26,12 @@
     belowskip=0pt % Space below the caption (reduces gap after caption)
 }
 
+% Adjusts horizontal margins of the slide content
+\setbeamersize{
+    text margin left=20pt, % Left margin of the slide content
+    text margin right=20pt % Right margin of the slide content
+}
+
 \newcommand{\source}[1]{\par\footnotesize Source: #1} % Defines a reusable command to display the image/table source in small font below the caption
 
 \renewcommand{\today}{\number\year-\number\month-\number\day}
@@ -720,6 +726,26 @@
         
         \begin{note}
             {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Example 9}
+
+        \begin{table}[htp!]
+            \centering
+            \caption{My table.}
+            % \label{tab:table1}
+            \begin{tabular}{ll}\toprule
+                Representation & Complexity \\\midrule
+                Adjacency matrix & $O(|V|^2)$ \\
+                Adjacency list & $O(|V| + |E|)$ \\
+                Edge list & $O(|E|)$ \\
+                Incidence matrix & $O(|V||E|)$ \\\bottomrule
+            \end{tabular}
+        \end{table}
+
+        \begin{note}
+            {Write your notes here}
         \end{note}
     \end{frame}
 
