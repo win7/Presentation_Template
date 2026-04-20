@@ -74,128 +74,110 @@
 \end{frame}
 
 \begin{frame}
-    \tableofcontents
+    \tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
+    % \tableofcontents[sectionstyle=show,subsectionstyle=hide,subsubsectionstyle=hide]
 \end{frame}
 
-\section{Introduction}
-    \begin{frame}{Blocks}
-        \begin{block}{Info}
-            General content
-        \end{block}
-
-        \begin{alertblock}{Warning}
-            Important message
-        \end{alertblock}
-
-        \begin{exampleblock}{Example}
-            Example content
-        \end{exampleblock}
-
-        \begin{note}
-            {Write your notes here}
-        \end{note}
-    \end{frame}
-
-    \begin{frame}{Basic}
-        In mathematics and computer science, a graph (network) is defined as $G = (V, E)$, where $V = \{v_1, v_2, ..., v_{n}\}$ is the nodes (or \textit{vertices}, or \textit{points}) set and $E = \{e_1, e_2, ..., e_{m}\}, e_i \in V \times V$ a set of edges (or \textit{lines}, or \textit{arcs}) formed by unordered pairs of nodes. \\
-
-        \scriptsize Number of nodes is denoted $|V|$. \\
-        Number of edges is denoted $|E|$.
-
-        \begin{figure}[htp!]
-            \centering
-            \includegraphics[
-                width=0.3\linewidth,
-                trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                clip
-            ]{pic/default_image.png}
-            \caption{My image.}
-            \source{Author, 2024.}
-            % \label{fig:my_image}
-        \end{figure}
-
-        \begin{note}
-            {Introduce your self}
-        \end{note}
-    \end{frame}
-
-    \begin{frame}{Basic}
-        \begin{alertblock}{Adjacency matrix}
-            Adjacency matrix \textbf{$A$}, is an $n \times n$ matrix where: 
-            \[
-                A_{i, j} =
-                \begin{cases}
-                1 & \text{if there is an edge from vertex } i \text{ to vertex } j \\
-                0 & \text{otherwise}
-                \end{cases}
-            \]
-        \end{alertblock}
-
-        \begin{figure}
-            \centering
-            \begin{subfigure}{0.2\textwidth}
-                \centering
-                \includegraphics[
-                    width=\linewidth,
-                    trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                    clip
-                ]{pic/default_image.png}
-                \caption{My image.}
-                % \source{Author, 2024.}
-            \end{subfigure}
-            % \hfill
-            \hspace{1cm}
-            \begin{subfigure}{0.2\textwidth}
-                \centering
-                \includegraphics[
-                    width=\linewidth,
-                    trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                    clip
-                ]{pic/default_image.png}
-                \caption{My image.}
-                % \source{Author, 2024.}
-            \end{subfigure}
-
-            \caption{My image.}
-            \source{Author, 2024.}
-            % \label{fig:my_image}
-        \end{figure}
-
-        \begin{note}
-            {Write your notes here}
-        \end{note}
-    \end{frame}
-
-    \begin{frame}{Basic}
-        \begin{alertblock}{Idea}
-            Does the shortest path from $a$ to $c$ go through $b$?
-        \end{alertblock}
-
-        \begin{figure}[htp!]
-            \centering
-            \includegraphics[
-                width=0.3\linewidth,
-                trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                clip
-            ]{pic/default_image.png}
-            \caption{My image.}
-            \source{Author, 2024.}
-            % \label{fig:my_image}
-        \end{figure}
-
-        \begin{note}
-            {Introduce your self}
-        \end{note}
-    \end{frame}
-
-    \begin{frame}{Basic}
-        BFS is a graph traversal algorithm that explores nodes level by level, visiting all nodes at a given distance from the starting node before moving to the next level. \newline
-
-        Description:
+\section{Components}
+\subsection{Lists}
+    \begin{frame}{Simple list}
         \begin{itemize}
-            \item Uses a queue (FIFO) to manage the nodes to be explored.
-            \item Marks visited nodes to avoid cycles or repeated visits.
-            \item Ideal for finding the shortest path in unweighted graphs.
+            \item \texttt{Python}
+            \item \texttt{Numpy}
+            \item \texttt{Pandas}
+            \item \texttt{NetworkX}
+            \item \texttt{Matplotlib}
+        \end{itemize}
+
+        \begin{note}
+            {Write your notes here}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{List of list}
+        \begin{itemize}
+            \item Install requirements
+                \begin{itemize}
+                    \item \texttt{Python}
+                    \item \texttt{Numpy}
+                    \item \texttt{Pandas}
+                    \item \texttt{NetworkX}
+                    \item \texttt{Matplotlib}
+                \end{itemize}
+            \item Topics 
+                \begin{itemize}
+                    \item Create graphs
+                    \item Graphs visualization
+                \end{itemize}
+            \item Links
+                \begin{itemize}
+                    \item \href{https://github.com/win7}{
+                            \beamergotobutton{\faGithub\ Open in GitHub}
+                        }
+                    \item \href{https://colab.research.google.com/}{
+                            \beamergotobutton{\faGoogle\ Open in Google Colab}
+                        }
+                \end{itemize}
+        \end{itemize}
+
+        \begin{note}
+            {Write your notes here}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Multicols list}
+        \begin{multicols}{2}
+            \begin{itemize}
+                \item Computer vision
+                \item Natural language processing
+                \item Recommender systems
+                \item Program analysis
+                \item Knowledge graphs
+                \item Bioinformatics
+                \item Chemistry
+                \item Biology
+                \item Physic
+                \item Anomaly detection
+                \item Urban intelligence
+                \item Financial transaction
+            \end{itemize}
+        \end{multicols}
+
+        \begin{note}
+            {Write your notes here}
+        \end{note}
+    \end{frame}
+    
+    \begin{frame}{Description list}
+        \begin{description}
+            \item[Input:] Graph data
+            \item[Output:] Community labels
+            \item[Method:] Leiden algorithm
+        \end{description}
+
+        \begin{note}
+            {Write your notes here}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Enumerate list}
+        \begin{enumerate}
+            \item \texttt{Python}
+            \item \texttt{Numpy}
+            \item \texttt{Pandas}
+            \item \texttt{NetworkX}
+            \item \texttt{Matplotlib}
+        \end{enumerate}
+
+        \begin{note}
+            {Write your notes here}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Sequential list display}
+        \begin{itemize}[<+-| alert@+>]
+            \item Many people use \LaTeX{}, and many universities have their own Beamer themes
+            \item For Chinese support, use Xe\LaTeX{} as the compiler
         \end{itemize}
 
         \begin{note}
@@ -203,16 +185,34 @@
         \end{note}
     \end{frame}
 
-\section{Methodology}
-    \begin{frame}{Equations}
-        Furthermore, each edge $e \in E$ is said to join two vertices. If $e$ joins $u, v \in V$, then $e = (u, v)$. Vertices $u$ and $v$ are said to be adjacent. \\
-        
-        \begin{alertblock}{Neighborhood}
-            \begin{equation}
-                N(v) = \{w \in V ∣ v \neq w \land (v, w) \in E\}
-                % \label{eq:equation1}
-            \end{equation}
-        \end{alertblock}
+    \begin{frame}[allowframebreaks]{List (dynamic)}
+        \begin{itemize}
+            \setlength{\itemsep}{10pt}
+            \item This template is modified from a Tsinghua University project
+            \item Original template: \url{https://www.overleaf.com/latex/templates/thu-beamer-theme/vwnqmzndvwyb}
+            \item Minor modifications were made
+            \item Style adjusted to personal preference
+            \item Added small Beamer usage examples
+            \item Replaced default fonts with more readable ones
+            \item Fixed inconsistent Chinese font issues
+            \item Changed math fonts to serif for better appearance
+            \item \alert{Use \cmd{alert} to emphasize text}
+            \item This template is modified from a Tsinghua University project
+            \item Original template: \url{https://www.overleaf.com/latex/templates/thu-beamer-theme/vwnqmzndvwyb}
+        \end{itemize}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+\subsection{Maths}
+    \begin{frame}{Simple equations}
+        $V = \frac{4}{3} \pi r^3$
+
+        \[
+            V = \frac{4}{3} \pi r^3
+        \]
 
         \begin{note}
             {Introduce your self}
@@ -220,41 +220,47 @@
     \end{frame}
 
     \begin{frame}{Equations}
-        \begin{alertblock}{Unnumbered equation}
-            \begin{equation*}
-                J(\theta) = \mathbb{E}_{\pi_\theta}[G_t]
-                % \label{eq:equation1}
-            \end{equation*}
-        \end{alertblock}
+        \begin{equation*}
+            E = mc^2
+            % \label{eq:equation1}
+        \end{equation*}
 
-        \begin{alertblock}{Multi-line equations}
-            \begin{align}
-                Q_{\mathrm{target}} &= r + \gamma Q^\pi(s', \pi_\theta(s') + \epsilon)\\
-                \epsilon &\sim \mathrm{clip}(\mathcal{N}(0, \sigma), -c, c)
-                % \label{eq:equation1}
-            \end{align}
-        \end{alertblock}
+        \begin{equation}
+            J(\theta) = \mathbb{E}_{\pi_\theta}[G_t]
+            % \label{eq:equation1}
+        \end{equation}
+
+        \begin{align}
+            Q_{\mathrm{target}} &= r + \gamma Q^\pi(s', \pi_\theta(s') + \epsilon)\\
+            \epsilon &\sim \mathrm{clip}(\mathcal{N}(0, \sigma), -c, c)
+            % \label{eq:equation1}
+        \end{align}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
     \end{frame}
 
-    \begin{frame}
-        \begin{alertblock}{Equation with numbers}
-            % Taken from Mathmode.tex
-            \begin{multline}
-                A=\lim_{n\rightarrow\infty}\Delta x\left(a^{2}+\left(a^{2}+2a\Delta x+\left(\Delta x\right)^{2}\right)\right.\label{eq:reset}\\
-                +\left(a^{2}+2\cdot2a\Delta x+2^{2}\left(\Delta x\right)^{2}\right)\\
-                +\left(a^{2}+2\cdot3a\Delta x+3^{2}\left(\Delta x\right)^{2}\right)\\
-                +\ldots\\
-                \left.+\left(a^{2}+2\cdot(n-1)a\Delta x+(n-1)^{2}\left(\Delta x\right)^{2}\right)\right)\\
-                =\frac{1}{3}\left(b^{3}-a^{3}\right)
-                % \label{eq:equation1}
-            \end{multline}
-        \end{alertblock}
+    \begin{frame}{Equation with numbers}
+        % Taken from Mathmode.tex
+        \begin{multline}
+            A=\lim_{n\rightarrow\infty}\Delta x\left(a^{2}+\left(a^{2}+2a\Delta x+\left(\Delta x\right)^{2}\right)\right. \\
+            +\left(a^{2}+2\cdot2a\Delta x+2^{2}\left(\Delta x\right)^{2}\right) \\
+            +\left(a^{2}+2\cdot3a\Delta x+3^{2}\left(\Delta x\right)^{2}\right) \\
+            +\ldots \\
+            \left.+\left(a^{2}+2\cdot(n-1)a\Delta x+(n-1)^{2}\left(\Delta x\right)^{2}\right)\right) \\
+            =\frac{1}{3}\left(b^{3}-a^{3}\right)
+            % \label{eq:equation1}
+        \end{multline}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
     \end{frame}
 
     \begin{frame}{Algorithms}
         \begin{algorithm}[H]
-            \scriptsize
-            % \footnotesize
+            \scriptsize % \footnotesize
             \DontPrintSemicolon
             % \SetAlgoLined
             % \SetNoline
@@ -292,126 +298,7 @@
         \end{note}
     \end{frame}
 
-    \begin{frame}{Two columns}
-        \begin{columns}[t] % The "c" centered vertical alignment, "t" top vertical alignment
-            \begin{column}{0.45\textwidth}
-                \begin{itemize}
-                    \item \textbf{Graph traversal}
-                    \begin{itemize}
-                        \item Breadth-First Search
-                        \item Depth-First Search
-                    \end{itemize}
-                \end{itemize}
-            \end{column}
-            
-            \begin{column}{0.55\textwidth}
-                \begin{itemize}
-                    \item \textbf{Shortest path algorithms}
-                    \begin{itemize}
-                        \item Dijkstra
-                        \item Floyd–Warshall
-                        \item Bellman-Ford
-                    \end{itemize}
-                \end{itemize}
-            \end{column}
-        \end{columns}
-
-        \begin{note}
-            {Introduce your self}
-        \end{note}
-    \end{frame}
-
-    \begin{frame}{Two columns}        
-        \begin{columns}[t] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-            \begin{column}{0.6\textwidth}
-                \begin{enumerate}
-                    \item Visit the adjacent unvisited node. Mark as visited, display, and insert (queue) in a queue.
-                    \item In case no adjacent node is found, remove the first node from the queue.
-                    \item Repeat steps 1, and 2 until the queue is empty.
-                \end{enumerate}
-            \end{column}
-            
-            \begin{column}{0.4\textwidth}
-                \begin{figure}[htp!]
-                    \centering
-                    \includegraphics[
-                        width=0.6\linewidth,
-                        trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                        clip
-                    ]{pic/default_image.png}
-                    \caption{My image.}
-                    \source{Author, 2024.}
-                    % \label{fig:my_image}
-                \end{figure}
-            \end{column}
-        \end{columns}
-        
-        \begin{note}
-            {Introduce your self}
-        \end{note}
-    \end{frame}
-
-    \begin{frame}{Lists}
-        \begin{itemize}
-            \item Install requirements
-                \begin{itemize}
-                    \item \texttt{Python}
-                    \item \texttt{Numpy}
-                    \item \texttt{Pandas}
-                    \item \texttt{NetworkX}
-                    \item \texttt{Matplotlib}
-                \end{itemize}
-            \item Topics 
-                \begin{itemize}
-                    \item Create graphs
-                    \item Graphs visualization
-                \end{itemize}
-            \item Lab
-                \begin{itemize}
-                    \item \href{https://drive.google.com/file/d/1e3h6VeZp3ocwF68VzBbgxJJbF98NSzZT/view?usp=sharing}{
-                            \beamergotobutton{\faGoogle\ Open in Google Colab}
-                        }
-                \end{itemize}
-        \end{itemize}
-
-        \begin{note}
-            {Write your notes here}
-        \end{note}
-    \end{frame}
-
-    \begin{frame}{Sequential list display}
-        \begin{itemize}[<+-| alert@+>]
-            \item Many people use \LaTeX{}, and many universities have their own Beamer themes
-            \item For Chinese support, use Xe\LaTeX{} as the compiler
-        \end{itemize}
-
-        \begin{note}
-            {Introduce your self}
-        \end{note}
-    \end{frame}
-
-    \begin{frame}[allowframebreaks]{Lists (dynamic)}
-        \begin{itemize}
-            \setlength{\itemsep}{10pt}
-            \item This template is modified from a Tsinghua University project
-            \item Original template: \url{https://www.overleaf.com/latex/templates/thu-beamer-theme/vwnqmzndvwyb}
-            \item Minor modifications were made
-            \item Style adjusted to personal preference
-            \item Added small Beamer usage examples
-            \item Replaced default fonts with more readable ones
-            \item Fixed inconsistent Chinese font issues
-            \item Changed math fonts to serif for better appearance
-            \item \alert{Use \cmd{alert} to emphasize text}
-            \item This template is modified from a Tsinghua University project
-            \item Original template: \url{https://www.overleaf.com/latex/templates/thu-beamer-theme/vwnqmzndvwyb}
-        \end{itemize}
-
-        \begin{note}
-            {Introduce your self}
-        \end{note}
-    \end{frame}
-
-\section{Results}
+\subsection{Tables}
     \begin{frame}{Table}
         \begin{table}[htp!]
             \centering
@@ -421,8 +308,8 @@
                 Representation & Complexity \\\midrule
                 Adjacency matrix & $O(|V|^2)$ \\
                 Adjacency list & $O(|V| + |E|)$ \\
-                Edge list & $O(|E|)$  \\
-                Incidence matrix & $O(|V||E|)$  \\\bottomrule
+                Edge list & $O(|E|)$ \\
+                Incidence matrix & $O(|V||E|)$ \\\bottomrule
             \end{tabular}
         \end{table}
 
@@ -451,6 +338,27 @@
         \end{note}
     \end{frame}
 
+    \begin{frame}{Table (custom)}
+        \begin{table}[htp!]
+            \centering
+            \caption{My table.}
+            % \label{tab:table1}
+            \begin{tabular}{c|c}
+                IA & Tasks \\
+                \hline
+                AI learns patterns & AI automates tasks \\
+                AI processes data & AI supports decisions \\
+                AI powers assistants & AI transforms industries \\
+                AI evolves & AI predicts \\
+            \end{tabular}
+        \end{table}
+
+        \begin{note}
+            {Write your notes here}
+        \end{note}
+    \end{frame}
+
+\subsection{Figures}
     \begin{frame}{Figure}
         \begin{figure}[htp!]
             \centering
@@ -515,7 +423,6 @@
                 \caption{My image.}
                 % \source{Author, 2024.}
             \end{subfigure}
-
             \caption{My image.}
             \source{Author, 2024.}
             % \label{fig:my_image}
@@ -544,6 +451,278 @@
         \end{note}
     \end{frame}
 
+\subsection{Others}
+    \begin{frame}{Blocks}
+        \begin{block}{Info}
+            General content
+        \end{block}
+
+        \begin{alertblock}{Warning}
+            Important message
+        \end{alertblock}
+
+        \begin{exampleblock}{Example}
+            Example content
+        \end{exampleblock}
+
+        \begin{note}
+            {Write your notes here}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Frame (two columns)}
+        \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
+            \begin{column}{0.45\textwidth}
+                \begin{itemize}
+                    \item \textbf{Graph traversal}
+                    \begin{itemize}
+                        \item Breadth-First Search
+                        \item Depth-First Search
+                    \end{itemize}
+                \end{itemize}
+            \end{column}
+            
+            \begin{column}{0.55\textwidth}
+                \begin{itemize}
+                    \item \textbf{Shortest path algorithms}
+                    \begin{itemize}
+                        \item Dijkstra
+                        \item Floyd–Warshall
+                        \item Bellman-Ford
+                    \end{itemize}
+                \end{itemize}
+            \end{column}
+        \end{columns}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+\section{Examples}
+    \begin{frame}{Example 1}
+        In mathematics and computer science, a graph (network) is defined as $G = (V, E)$, where $V = \{v_1, v_2, ..., v_{n}\}$ is the nodes (or \textit{vertices}, or \textit{points}) set and $E = \{e_1, e_2, ..., e_{m}\}, e_i \in V \times V$ a set of edges (or \textit{lines}, or \textit{arcs}) formed by unordered pairs of nodes. \newline
+
+        \scriptsize Number of nodes is denoted $|V|$. \\
+        Number of edges is denoted $|E|$.
+
+        \begin{figure}[htp!]
+            \centering
+            \includegraphics[
+                width=0.3\linewidth,
+                trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                clip
+            ]{pic/default_image.png}
+            \caption{My image.}
+            \source{Author, 2024.}
+            % \label{fig:my_image}
+        \end{figure}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Example 2}
+        Furthermore, each edge $e \in E$ is said to join two vertices. If $e$ joins $u, v \in V$, then $e = (u, v)$. Vertices $u$ and $v$ are said to be adjacent. \\
+        
+        \begin{alertblock}{Neighborhood}
+            \begin{equation}
+                N(v) = \{w \in V ∣ v \neq w \land (v, w) \in E\}
+                % \label{eq:my_equation}
+            \end{equation}
+        \end{alertblock}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Example 3}
+        \begin{alertblock}{Adjacency matrix}
+            Adjacency matrix \textbf{$A$}, is an $n \times n$ matrix where: 
+            \[
+                A_{i, j} =
+                \begin{cases}
+                1 & \text{if there is an edge from vertex } i \text{ to vertex } j \\
+                0 & \text{otherwise}
+                \end{cases}
+            \]
+        \end{alertblock}
+
+        \begin{figure}
+            \centering
+            \begin{subfigure}{0.2\textwidth}
+                \centering
+                \includegraphics[
+                    width=\linewidth,
+                    trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                    clip
+                ]{pic/default_image.png}
+                \caption{My image.}
+                % \source{Author, 2024.}
+            \end{subfigure}
+            % \hfill
+            \hspace{1cm}
+            \begin{subfigure}{0.2\textwidth}
+                \centering
+                \includegraphics[
+                    width=\linewidth,
+                    trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                    clip
+                ]{pic/default_image.png}
+                \caption{My image.}
+                % \source{Author, 2024.}
+            \end{subfigure}
+            \caption{My image.}
+            \source{Author, 2024.}
+            % \label{fig:my_image}
+        \end{figure}
+
+        \begin{note}
+            {Write your notes here}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Example 4}
+        \begin{alertblock}{Idea}
+            Does the shortest path from $a$ to $c$ go through $b$?
+        \end{alertblock}
+
+        \begin{figure}[htp!]
+            \centering
+            \includegraphics[
+                width=0.3\linewidth,
+                trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                clip
+            ]{pic/default_image.png}
+            \caption{My image.}
+            \source{Author, 2024.}
+            % \label{fig:my_image}
+        \end{figure}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Example 5}
+        BFS is a graph traversal algorithm that explores nodes level by level, visiting all nodes at a given distance from the starting node before moving to the next level. \newline
+
+        Description:
+        \begin{itemize}
+            \item Uses a queue (FIFO) to manage the nodes to be explored.
+            \item Marks visited nodes to avoid cycles or repeated visits.
+            \item Ideal for finding the shortest path in unweighted graphs.
+        \end{itemize}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Example 6}
+        In this lab, students will apply basic programming concepts to solve problems, develop coding skills, and practice writing and debugging efficient solutions. \newline
+
+        \begin{itemize}
+            \item Requirements
+                \begin{itemize}
+                    \item \texttt{Python}
+                    \item \texttt{Numpy}
+                    \item \texttt{Pandas}
+                    \item \texttt{NetworkX}
+                    \item \texttt{Matplotlib}
+                \end{itemize}
+            \item Topics 
+                \begin{itemize}
+                    \item Create graphs
+                    \item Graphs visualization
+                \end{itemize}
+            \item Lab
+                \begin{itemize}
+                    \item \href{https://colab.research.google.com/}{
+                            \beamergotobutton{\faGoogle\ Open in Google Colab}
+                        }
+                \end{itemize}
+        \end{itemize}
+
+        \begin{note}
+            {Write your notes here}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Example 7}
+        This section introduces key equations to model and analyze the problem. \newline
+
+        \begin{alertblock}{Main equation}
+            \begin{equation*}
+                J(\theta) = \mathbb{E}_{\pi_\theta}[G_t]
+                % \label{eq:equation1}
+            \end{equation*}
+        \end{alertblock}
+
+        \begin{alertblock}{Supplementary equations}
+            \begin{align}
+                Q_{\mathrm{target}} &= r + \gamma Q^\pi(s', \pi_\theta(s') + \epsilon)\\
+                \epsilon &\sim \mathrm{clip}(\mathcal{N}(0, \sigma), -c, c)
+                % \label{eq:equation1}
+            \end{align}
+        \end{alertblock}
+
+        \begin{note}
+            {Write your notes here}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}
+        \begin{alertblock}{Solution}
+            % Taken from Mathmode.tex
+            \begin{multline}
+                A=\lim_{n\rightarrow\infty}\Delta x\left(a^{2}+\left(a^{2}+2a\Delta x+\left(\Delta x\right)^{2}\right)\right.\\
+                +\left(a^{2}+2\cdot2a\Delta x+2^{2}\left(\Delta x\right)^{2}\right)\\
+                +\left(a^{2}+2\cdot3a\Delta x+3^{2}\left(\Delta x\right)^{2}\right)\\
+                +\ldots\\
+                \left.+\left(a^{2}+2\cdot(n-1)a\Delta x+(n-1)^{2}\left(\Delta x\right)^{2}\right)\right)\\
+                =\frac{1}{3}\left(b^{3}-a^{3}\right)
+                % \label{eq:equation1}
+            \end{multline}
+        \end{alertblock}
+
+        \begin{note}
+            {Write your notes here}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Example 8}        
+        \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
+            \begin{column}{0.6\textwidth}
+                \begin{enumerate}
+                    \item Visit the adjacent unvisited node. Mark as visited, display, and insert (queue) in a queue.
+                    \item In case no adjacent node is found, remove the first node from the queue.
+                    \item Repeat steps 1, and 2 until the queue is empty.
+                \end{enumerate}
+            \end{column}
+            
+            \begin{column}{0.4\textwidth}
+                \begin{figure}[htp!]
+                    \centering
+                    \includegraphics[
+                        width=0.6\linewidth,
+                        trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                        clip
+                    ]{pic/default_image.png}
+                    \caption{My image.}
+                    \source{Author, 2024.}
+                    % \label{fig:my_image}
+                \end{figure}
+            \end{column}
+        \end{columns}
+        
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
 \section*{References}
     \begin{frame}
         \begin{center}
@@ -555,9 +734,8 @@
         \end{center}
     \end{frame}
     
-    %========================
-    % bibliography
-    %========================
+
+    % Bibliography
     % \input{ref.bib}
     \begin{frame}[allowframebreaks]
         \footnotesize % use this command to resize
