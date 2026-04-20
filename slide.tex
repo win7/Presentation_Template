@@ -42,6 +42,22 @@
 \author[Topics]{Topics}
 
 \title[Title of Presentation]{Title of Presentation}
+% Custom title template with a styled box
+% \setbeamertemplate{title}{
+%     \makebox[\textwidth]{ % force horizontal centering
+%         \begin{beamercolorbox}[
+%             wd=0.9\textwidth,
+%             sep=5pt,
+%             center,
+%             rounded=true,
+%             shadow=false
+%         ]{title}
+%             \usebeamerfont{title}
+%             \inserttitle
+%         \end{beamercolorbox}
+%     }
+% }
+
 % \subtitle{Jiangnan University Academic Report Beamer Template}
 %% \institute[JNU]{\normalsize{\inst{1} School of Business \quad Jiangnan University \quad \textit{****@qq.com}}}
 \institute[Session 1]{
@@ -266,7 +282,7 @@
 
     \begin{frame}{Algorithms}
         \begin{algorithm}[H]
-            \scriptsize % \footnotesize
+            % \scriptsize % \footnotesize
             \DontPrintSemicolon
             % \SetAlgoLined
             % \SetNoline
