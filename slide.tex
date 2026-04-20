@@ -11,7 +11,6 @@
 \usefonttheme[onlymath]{serif} % Use serif font for equations (better appearance)
 
 % Other packages (new)
-% \usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra} % math symbols, equations, colors, columns, tables, and calligraphic font
 \usepackage[linesnumbered,ruled,vlined]{algorithm2e}
 \SetKwComment{Comment}{$\triangleright$ }{} % The argument will be surrounded by /* ... */
 \SetAlCapFnt{\footnotesize} % Make caption text smaller
@@ -20,8 +19,9 @@
 \usepackage{animate} % Provides support for frame-by-frame animations (\animategraphics)
 \usepackage{subcaption} % Provides support for subfigures (subfigure environment with captions)
 \usepackage{fontawesome5} % Provides scalable vector icons (Font Awesome 5 icons)
-
+\usepackage{caption}
 \captionsetup{
+    font=footnotesize, % Reduce caption text size
     skip=5pt, % Space between figure and caption
     belowskip=0pt % Space below the caption (reduces gap after caption)
 }
@@ -32,7 +32,7 @@
     text margin right=20pt % Right margin of the slide content
 }
 
-\newcommand{\source}[1]{\par\footnotesize Source: #1} % Defines a reusable command to display the image/table source in small font below the caption
+\newcommand{\source}[1]{\par\scriptsize Source: #1} % Defines a reusable command to display the image/table source in small font below the caption
 
 \renewcommand{\today}{\number\year-\number\month-\number\day}
 \renewcommand{\alert}[1]{\textbf{\color{swufe}#1}}
@@ -487,7 +487,6 @@
                     \end{itemize}
                 \end{itemize}
             \end{column}
-            
             \begin{column}{0.55\textwidth}
                 \begin{itemize}
                     \item \textbf{Shortest path algorithms}
@@ -530,7 +529,7 @@
     \end{frame}
 
     \begin{frame}{Example 2}
-        Furthermore, each edge $e \in E$ is said to join two vertices. If $e$ joins $u, v \in V$, then $e = (u, v)$. Vertices $u$ and $v$ are said to be adjacent. \\
+        Furthermore, each edge $e \in E$ is said to join two vertices. If $e$ joins $u, v \in V$, then $e = (u, v)$. Vertices $u$ and $v$ are said to be adjacent.
         
         \begin{alertblock}{Neighborhood}
             \begin{equation}
@@ -658,7 +657,7 @@
     \end{frame}
 
     \begin{frame}{Example 7}
-        This section introduces key equations to model and analyze the problem. \newline
+        This section introduces key equations to model and analyze the problem.
 
         \begin{alertblock}{Main equation}
             \begin{equation*}
@@ -699,7 +698,7 @@
         \end{note}
     \end{frame}
 
-    \begin{frame}{Example 8}        
+    \begin{frame}{Example 8}
         \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
             \begin{column}{0.6\textwidth}
                 \begin{enumerate}
@@ -708,7 +707,6 @@
                     \item Repeat steps 1, and 2 until the queue is empty.
                 \end{enumerate}
             \end{column}
-            
             \begin{column}{0.4\textwidth}
                 \begin{figure}[htp!]
                     \centering
@@ -730,6 +728,7 @@
     \end{frame}
 
     \begin{frame}{Example 9}
+        The following table summarizes the key information and results, providing a clear overview of the main variables and their relationships.
 
         \begin{table}[htp!]
             \centering
@@ -746,6 +745,44 @@
 
         \begin{note}
             {Write your notes here}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Example 10}
+        The following table summarizes the key information and results, providing a clear overview of the main variables and their relationships.
+
+        \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
+            \begin{column}{0.6\textwidth}
+                \begin{table}[htp!]
+                    \centering
+                    \caption{My table.}
+                    % \label{tab:table1}
+                    \begin{tabular}{ll}\toprule
+                        Representation & Complexity \\\midrule
+                        Adjacency matrix & $O(|V|^2)$ \\
+                        Adjacency list & $O(|V| + |E|)$ \\
+                        Edge list & $O(|E|)$ \\
+                        Incidence matrix & $O(|V||E|)$ \\\bottomrule
+                    \end{tabular}
+                \end{table}
+            \end{column}
+            \begin{column}{0.4\textwidth}
+                \begin{figure}[htp!]
+                    \centering
+                    \includegraphics[
+                        width=0.6\linewidth,
+                        trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                        clip
+                    ]{pic/default_image.png}
+                    \caption{My image.}
+                    \source{Author, 2024.}
+                    % \label{fig:my_image}
+                \end{figure}
+            \end{column}
+        \end{columns}
+        
+        \begin{note}
+            {Introduce your self}
         \end{note}
     \end{frame}
 
