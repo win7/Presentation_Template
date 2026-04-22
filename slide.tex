@@ -32,7 +32,7 @@
     text margin right=20pt % Right margin of the slide content
 }
 
-\newcommand{\source}[1]{\par\scriptsize Source: #1} % Defines a reusable command to display the image/table source in small font below the caption
+\newcommand{\source}[1]{\par\tiny Source: #1} % Defines a reusable command to display the image/table source in small font below the caption
 
 \renewcommand{\today}{\number\year-\number\month-\number\day}
 \renewcommand{\alert}[1]{\textbf{\color{swufe}#1}}
@@ -104,12 +104,26 @@
 \subsection{Lists}
     \begin{frame}{Simple list}
         \begin{itemize}
-            \item \texttt{Python}
-            \item \texttt{Numpy}
-            \item \texttt{Pandas}
-            \item \texttt{NetworkX}
-            \item \texttt{Matplotlib}
+            \item Google
+            \item Microsoft
+            \item Apple
+            \item Amazon
+            \item Meta
         \end{itemize}
+
+        \begin{note}
+            {Write your notes here}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Enumerate list}
+        \begin{enumerate}
+            \item \texttt{Python}
+            \item \texttt{Java}
+            \item \texttt{C++}
+            \item \texttt{C}
+            \item \texttt{Go}
+        \end{enumerate}
 
         \begin{note}
             {Write your notes here}
@@ -176,20 +190,6 @@
             \item[Output:] Community labels
             \item[Method:] Leiden algorithm
         \end{description}
-
-        \begin{note}
-            {Write your notes here}
-        \end{note}
-    \end{frame}
-
-    \begin{frame}{Enumerate list}
-        \begin{enumerate}
-            \item \texttt{Python}
-            \item \texttt{Numpy}
-            \item \texttt{Pandas}
-            \item \texttt{NetworkX}
-            \item \texttt{Matplotlib}
-        \end{enumerate}
 
         \begin{note}
             {Write your notes here}
@@ -323,6 +323,7 @@
 \subsection{Tables}
     \begin{frame}{Table}
         \begin{table}[htp!]
+            % \scriptsize
             \centering
             \caption{My table.}
             % \label{tab:table1}
@@ -362,6 +363,7 @@
 
     \begin{frame}{Table (custom)}
         \begin{table}[htp!]
+            % \scriptsize
             \centering
             \caption{My table.}
             % \label{tab:table1}
@@ -802,6 +804,43 @@
         \end{note}
     \end{frame}
 
+
+    \begin{frame}{Example 11}
+        The following table summarizes the key information and results, providing a clear overview of the main variables and their relationships.
+
+        \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
+            \begin{column}{0.6\textwidth}
+                \begin{enumerate}
+                    \item \alert{Análisis:} Definir requisitos y comprender el problema.
+                    \item \alert{Diseño:} Planificar la estructura del algoritmo.
+                    \item \alert{Implementación:} Escribir el código en un lenguaje de programación.
+                    \item \alert{Prueba:} Verificar el funcionamiento y corregir errores.
+                \end{enumerate}
+            \end{column}
+            \begin{column}{0.4\textwidth}
+                \begin{figure}[htp!]
+                    \centering
+                    \includegraphics[
+                        width=1.0\linewidth,
+                        trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                        clip
+                    ]{pic/default_image.png}
+                    \caption{My image.}
+                    \source{Author, 2024.}
+                    % \label{fig:my_image}
+                \end{figure}
+            \end{column}
+        \end{columns}
+        
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+        
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
 \section*{References}
     \begin{frame}
         \begin{center}
@@ -809,7 +848,7 @@
             % {\Huge\textit{Thank you for your attention!}}\\
             {\Huge $\infty$} \\
             % edwin.alvarez@pucp.edu.pe\\
-            % \url{https://github.com/win7}
+            \url{https://github.com/win7}
         \end{center}
     \end{frame}
     
