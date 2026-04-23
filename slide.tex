@@ -162,7 +162,7 @@
     \end{frame}
 
     \begin{frame}{Multicols list}
-        \begin{multicols}{2}
+        \begin{multicols}{2} % Two columns
             \begin{itemize}
                 \item Computer vision
                 \item Natural language processing
@@ -215,6 +215,7 @@
             \item Minor modifications were made
             \item Style adjusted to personal preference
             \item Added small Beamer usage examples
+            \item This is \emph{emphasized text}
             \item Replaced default fonts with more readable ones
             \item Fixed inconsistent Chinese font issues
             \item Changed math fonts to serif for better appearance
@@ -494,11 +495,11 @@
         \end{note}
     \end{frame}
 
-    \begin{frame}{Frame (two columns)}
+    \begin{frame}{Frame (Two columns)}
         \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
             \begin{column}{0.45\textwidth}
                 \begin{itemize}
-                    \item \textbf{Graph traversal}
+                    \item \alert{Graph traversal}
                     \begin{itemize}
                         \item Breadth-First Search
                         \item Depth-First Search
@@ -507,11 +508,58 @@
             \end{column}
             \begin{column}{0.55\textwidth}
                 \begin{itemize}
-                    \item \textbf{Shortest path algorithms}
+                    \item \alert{Shortest path algorithms}
                     \begin{itemize}
                         \item Dijkstra
                         \item Floyd–Warshall
                         \item Bellman-Ford
+                    \end{itemize}
+                \end{itemize}
+            \end{column}
+        \end{columns}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Frame (Three columns)}
+        \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
+            \begin{column}{0.33\textwidth}
+                \begin{itemize}
+                    \item \alert{Node-level}
+                    \begin{itemize}
+                        \item Degree
+                        \item Degree centrality
+                        \item Closeness centrality
+                        \item Betweenness centrality
+                        % \item Centrality
+                        \item Eccentricity
+                    \end{itemize}
+                \end{itemize}
+            \end{column}
+            \begin{column}{0.33\textwidth}
+                \begin{itemize}
+                    \item \alert{Edge-level}
+                    \begin{itemize}
+                        \item Shortest path
+                        \item Betweenness centrality
+                        \item Distance
+                    \end{itemize}
+                \end{itemize}
+            \end{column}
+            \begin{column}{0.33\textwidth}
+                \begin{itemize}
+                    \item \alert{Graph-level}
+                    \begin{itemize}
+                        \item Order
+                        \item Size
+                        \item Density
+                        \item Diameter
+                        \item Radius
+                        % \item Average path
+                        \item Clustering coefficient
+                        \item Modularity
                     \end{itemize}
                 \end{itemize}
             \end{column}
@@ -804,11 +852,10 @@
         \end{note}
     \end{frame}
 
-
     \begin{frame}{Example 11}
         The following table summarizes the key information and results, providing a clear overview of the main variables and their relationships.
 
-        \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
+        \begin{columns}[c] % Option "t" centers vertically, while "t" aligns to the top.
             \begin{column}{0.6\textwidth}
                 \begin{enumerate}
                     \item \alert{Análisis:} Definir requisitos y comprender el problema.
@@ -841,6 +888,45 @@
         \end{note}
     \end{frame}
 
+    \begin{frame}{Example 12}
+        \begin{exampleblock}{Degree}
+            Given a graph $G = (V, E)$.
+
+            The degree of a node $u$, denoted as $deg(u)$, is defined as the number of edges that are adjacent to this node $u$.
+        \end{exampleblock}
+
+        \begin{multicols}{2} % Two columns
+            For undirected graphs:
+            \begin{equation}
+                deg(u) = \left|\{v \in V : (u, v) \in E\}\right|
+                % \label{eq:my_equation}
+            \end{equation}
+        
+            For directed graphs:
+            \begin{equation}
+                deg(u) = deg^{in}(u) + deg^{out}(u)
+                % \label{eq:my_equation}
+            \end{equation}
+        \end{multicols}
+        
+        Where, $deg^{in}(u)$: in-degree and $deg^{out}(u)$: out-degree. \newline
+
+        Applications:
+        \begin{itemize}
+            \item Social networks: users with many connections.
+            \item Biology networks: metabolites involved in many reactions.
+            \item Web: most linked pages.
+        \end{itemize}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+        
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
 \section*{References}
     \begin{frame}
         \begin{center}
@@ -852,7 +938,6 @@
         \end{center}
     \end{frame}
     
-
     % Bibliography
     % \input{ref.bib}
     \begin{frame}[allowframebreaks]
@@ -872,5 +957,4 @@
             \item Broadwater, K., \& Stillman, N. (2025). \textit{Graph neural networks in action}. % Simon and Schuster.
         \end{itemize}
     \end{frame}
-
 \end{document}
