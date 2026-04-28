@@ -1,4 +1,5 @@
-\documentclass{beamer}
+% \documentclass{beamer}
+\documentclass[aspectratio=169]{beamer}
 \usepackage{hyperref}
 %% \usepackage[CJKmath=true, AutoFakeBold = true]{xeCJK}
 \usepackage[T1]{fontenc}
@@ -27,15 +28,16 @@
 }
 
 % Adjusts horizontal margins of the slide content
-\setbeamersize{
-    text margin left=20pt, % Left margin of the slide content
-    text margin right=20pt % Right margin of the slide content
-}
+% \setbeamersize{
+%     text margin left=20pt, % Left margin of the slide content
+%     text margin right=20pt % Right margin of the slide content
+% }
 
 \newcommand{\source}[1]{\par\tiny Source: #1} % Defines a reusable command to display the image/table source in small font below the caption
 
 \renewcommand{\today}{\number\year-\number\month-\number\day}
 \renewcommand{\alert}[1]{\textbf{\color{swufe}#1}}
+\newcommand{\alertplain}[1]{{\color{swufe}#1}}
 
 % Title page setup
 % \author{Lu** \inst{1}, Zhang** \inst{1}}
@@ -101,500 +103,580 @@
 \end{frame}
 
 \section{Components}
-\subsection{Lists}
-    \begin{frame}{Simple list}
-        \begin{itemize}
-            \item Google
-            \item Microsoft
-            \item Apple
-            \item Amazon
-            \item Meta
-        \end{itemize}
-
-        \begin{note}
-            {Write your notes here}
-        \end{note}
-    \end{frame}
-
-    \begin{frame}{Enumerate list}
-        \begin{enumerate}
-            \item \texttt{Python}
-            \item \texttt{Java}
-            \item \texttt{C++}
-            \item \texttt{C}
-            \item \texttt{Go}
-        \end{enumerate}
-
-        \begin{note}
-            {Write your notes here}
-        \end{note}
-    \end{frame}
-
-    \begin{frame}{List of list}
-        \begin{itemize}
-            \item Install requirements
-                \begin{itemize}
-                    \item \texttt{Python}
-                    \item \texttt{Numpy}
-                    \item \texttt{Pandas}
-                    \item \texttt{NetworkX}
-                    \item \texttt{Matplotlib}
-                \end{itemize}
-            \item Topics 
-                \begin{itemize}
-                    \item Create graphs
-                    \item Graphs visualization
-                \end{itemize}
-            \item Links
-                \begin{itemize}
-                    \item \href{https://github.com/win7}{
-                            \beamergotobutton{\faGithub\ Open in GitHub}
-                        }
-                    \item \href{https://colab.research.google.com/}{
-                            \beamergotobutton{\faGoogle\ Open in Google Colab}
-                        }
-                \end{itemize}
-        \end{itemize}
-
-        \begin{note}
-            {Write your notes here}
-        \end{note}
-    \end{frame}
-
-    \begin{frame}{Multicols list}
-        \begin{multicols}{2} % Two columns
+    \subsection{Lists}
+        \begin{frame}{Simple list}
             \begin{itemize}
-                \item Computer vision
-                \item Natural language processing
-                \item Recommender systems
-                \item Program analysis
-                \item Knowledge graphs
-                \item Bioinformatics
-                \item Chemistry
-                \item Biology
-                \item Physic
-                \item Anomaly detection
-                \item Urban intelligence
-                \item Financial transaction
+                \item Google
+                \item Microsoft
+                \item Apple
+                \item Amazon
+                \item Meta
             \end{itemize}
-        \end{multicols}
 
-        \begin{note}
-            {Write your notes here}
-        \end{note}
-    \end{frame}
-    
-    \begin{frame}{Description list}
-        \begin{description}
-            \item[Input:] Graph data
-            \item[Output:] Community labels
-            \item[Method:] Leiden algorithm
-        \end{description}
+            \begin{note}
+                {Write your notes here}
+            \end{note}
+        \end{frame}
 
-        \begin{note}
-            {Write your notes here}
-        \end{note}
-    \end{frame}
+        \begin{frame}{Enumerate list}
+            \begin{enumerate}
+                \item \texttt{Python}
+                \item \texttt{Java}
+                \item \texttt{C++}
+                \item \texttt{C}
+                \item \texttt{Go}
+            \end{enumerate}
 
-    \begin{frame}{Sequential list display}
-        \begin{itemize}[<+-| alert@+>]
-            \item Many people use \LaTeX{}, and many universities have their own Beamer themes
-            \item For Chinese support, use Xe\LaTeX{} as the compiler
-        \end{itemize}
+            \begin{note}
+                {Write your notes here}
+            \end{note}
+        \end{frame}
 
-        \begin{note}
-            {Introduce your self}
-        \end{note}
-    \end{frame}
+        \begin{frame}{List of list}
+            \begin{itemize}
+                \item Install requirements
+                    \begin{itemize}
+                        \item \texttt{Python}
+                        \item \texttt{Numpy}
+                        \item \texttt{Pandas}
+                        \item \texttt{NetworkX}
+                        \item \texttt{Matplotlib}
+                    \end{itemize}
+                \item Topics 
+                    \begin{itemize}
+                        \item Create graphs
+                        \item Graphs visualization
+                    \end{itemize}
+                \item Links
+                    \begin{itemize}
+                        \item \href{https://github.com/win7}{
+                                \beamergotobutton{\faGithub\ Open in GitHub}
+                            }
+                        \item \href{https://colab.research.google.com/}{
+                                \beamergotobutton{\faGoogle\ Open in Google Colab}
+                            }
+                    \end{itemize}
+            \end{itemize}
 
-    \begin{frame}[allowframebreaks]{List (dynamic)}
-        \begin{itemize}
-            \setlength{\itemsep}{10pt}
-            \item This template is modified from a Tsinghua University project
-            \item Original template: \url{https://www.overleaf.com/latex/templates/thu-beamer-theme/vwnqmzndvwyb}
-            \item Minor modifications were made
-            \item Style adjusted to personal preference
-            \item Added small Beamer usage examples
-            \item This is \emph{emphasized text}
-            \item Replaced default fonts with more readable ones
-            \item Fixed inconsistent Chinese font issues
-            \item Changed math fonts to serif for better appearance
-            \item \alert{Use \cmd{alert} to emphasize text}
-            \item This template is modified from a Tsinghua University project
-            \item Original template: \url{https://www.overleaf.com/latex/templates/thu-beamer-theme/vwnqmzndvwyb}
-        \end{itemize}
+            \begin{note}
+                {Write your notes here}
+            \end{note}
+        \end{frame}
 
-        \begin{note}
-            {Introduce your self}
-        \end{note}
-    \end{frame}
+        \begin{frame}{Multicols list}
+            \begin{multicols}{2} % Two columns
+                \begin{itemize}
+                    \item Computer vision
+                    \item Natural language processing
+                    \item Recommender systems
+                    \item Program analysis
+                    \item Knowledge graphs
+                    \item Bioinformatics
+                    \item Chemistry
+                    \item Biology
+                    \item Physic
+                    \item Anomaly detection
+                    \item Urban intelligence
+                    \item Financial transaction
+                \end{itemize}
+            \end{multicols}
 
-\subsection{Maths}
-    \begin{frame}{Simple equations}
-        $V = \frac{4}{3} \pi r^3$
+            \begin{note}
+                {Write your notes here}
+            \end{note}
+        \end{frame}
+        
+        \begin{frame}{Description list}
+            \begin{description}
+                \item[Input:] Graph data
+                \item[Output:] Community labels
+                \item[Method:] Leiden algorithm
+            \end{description}
 
-        \[
-            V = \frac{4}{3} \pi r^3
-        \]
+            \begin{note}
+                {Write your notes here}
+            \end{note}
+        \end{frame}
 
-        \begin{note}
-            {Introduce your self}
-        \end{note}
-    \end{frame}
+        \begin{frame}{Sequential list display}
+            \begin{itemize}[<+-| alert@+>]
+                \item Many people use \LaTeX{}, and many universities have their own Beamer themes
+                \item For Chinese support, use Xe\LaTeX{} as the compiler
+            \end{itemize}
 
-    \begin{frame}{Equations}
-        \begin{equation*}
-            E = mc^2
-            % \label{eq:equation1}
-        \end{equation*}
+            \begin{note}
+                {Introduce your self}
+            \end{note}
+        \end{frame}
 
-        \begin{equation}
-            J(\theta) = \mathbb{E}_{\pi_\theta}[G_t]
-            % \label{eq:equation1}
-        \end{equation}
+        \begin{frame}[allowframebreaks]{List (dynamic)}
+            \begin{itemize}
+                \setlength{\itemsep}{10pt}
+                \item This template is modified from a Tsinghua University project
+                \item Original template: \url{https://www.overleaf.com/latex/templates/thu-beamer-theme/vwnqmzndvwyb}
+                \item Minor modifications were made
+                \item Style adjusted to personal preference
+                \item Added small Beamer usage examples
+                \item This is \emph{emphasized text}
+                \item Replaced default fonts with more readable ones
+                \item Fixed inconsistent Chinese font issues
+                \item Changed math fonts to serif for better appearance
+                \item \alert{Use \cmd{alert} to emphasize text}
+                \item This template is modified from a Tsinghua University project
+                \item Original template: \url{https://www.overleaf.com/latex/templates/thu-beamer-theme/vwnqmzndvwyb}
+            \end{itemize}
 
-        \begin{align}
-            Q_{\mathrm{target}} &= r + \gamma Q^\pi(s', \pi_\theta(s') + \epsilon)\\
-            \epsilon &\sim \mathrm{clip}(\mathcal{N}(0, \sigma), -c, c)
-            % \label{eq:equation1}
-        \end{align}
+            \begin{note}
+                {Introduce your self}
+            \end{note}
+        \end{frame}
 
-        \begin{note}
-            {Introduce your self}
-        \end{note}
-    \end{frame}
+    \subsection{Maths}
+        \begin{frame}{Simple equations}
+            $V = \frac{4}{3} \pi r^3$
 
-    \begin{frame}{Equation with numbers}
-        % Taken from Mathmode.tex
-        \begin{multline}
-            A=\lim_{n\rightarrow\infty}\Delta x\left(a^{2}+\left(a^{2}+2a\Delta x+\left(\Delta x\right)^{2}\right)\right. \\
-            +\left(a^{2}+2\cdot2a\Delta x+2^{2}\left(\Delta x\right)^{2}\right) \\
-            +\left(a^{2}+2\cdot3a\Delta x+3^{2}\left(\Delta x\right)^{2}\right) \\
-            +\ldots \\
-            \left.+\left(a^{2}+2\cdot(n-1)a\Delta x+(n-1)^{2}\left(\Delta x\right)^{2}\right)\right) \\
-            =\frac{1}{3}\left(b^{3}-a^{3}\right)
-            % \label{eq:equation1}
-        \end{multline}
+            \[
+                V = \frac{4}{3} \pi r^3
+            \]
 
-        \begin{note}
-            {Introduce your self}
-        \end{note}
-    \end{frame}
+            \begin{note}
+                {Introduce your self}
+            \end{note}
+        \end{frame}
 
-    \begin{frame}{Algorithms}
-        \begin{algorithm}[H]
-            % \scriptsize % \footnotesize
-            \DontPrintSemicolon
-            % \SetAlgoLined
-            % \SetNoline
-            
-            \SetKwInOut{Input}{Input}
-            \SetKwInOut{Output}{Output}
-            
-            \Input{$G$, $s$ \Comment*[r]{Graph $G$ and a source node $s$}}
-            \Output{All nodes reachable from $s$}
-            
-            % \BlankLine
-            $Q \gets \varnothing$ \Comment*[r]{Create an empty queue}
-            $V \gets \varnothing$ \Comment*[r]{Create an empty set of visited}
-            $enqueue(Q, s)$\;
-            $append(V, s)$\;
-            
-            \While{$Q \neq \varnothing$}{
-                $v \gets dequeue(Q)$\;
-                $print(v)$\;
+        \begin{frame}{Equations}
+            \begin{equation*}
+                E = mc^2
+                % \label{eq:equation1}
+            \end{equation*}
 
-                \ForEach{$u \in N(v)$}{ % \Comment*[r]{process all neighbors of node $u$}
-                    \If{$u \notin V$}{
-                        $append(V, u)$\;
-                        $enqueue(Q, u)$
+            \begin{equation}
+                J(\theta) = \mathbb{E}_{\pi_\theta}[G_t]
+                % \label{eq:equation1}
+            \end{equation}
+
+            \begin{align}
+                Q_{\mathrm{target}} &= r + \gamma Q^\pi(s', \pi_\theta(s') + \epsilon)\\
+                \epsilon &\sim \mathrm{clip}(\mathcal{N}(0, \sigma), -c, c)
+                % \label{eq:equation1}
+            \end{align}
+
+            \begin{note}
+                {Introduce your self}
+            \end{note}
+        \end{frame}
+
+        \begin{frame}{Equation with numbers}
+            % Taken from Mathmode.tex
+            \begin{multline}
+                A=\lim_{n\rightarrow\infty}\Delta x\left(a^{2}+\left(a^{2}+2a\Delta x+\left(\Delta x\right)^{2}\right)\right. \\
+                +\left(a^{2}+2\cdot2a\Delta x+2^{2}\left(\Delta x\right)^{2}\right) \\
+                +\left(a^{2}+2\cdot3a\Delta x+3^{2}\left(\Delta x\right)^{2}\right) \\
+                +\ldots \\
+                \left.+\left(a^{2}+2\cdot(n-1)a\Delta x+(n-1)^{2}\left(\Delta x\right)^{2}\right)\right) \\
+                =\frac{1}{3}\left(b^{3}-a^{3}\right)
+                % \label{eq:equation1}
+            \end{multline}
+
+            \begin{note}
+                {Introduce your self}
+            \end{note}
+        \end{frame}
+
+        \begin{frame}{Algorithms}
+            \begin{algorithm}[H]
+                % \scriptsize % \footnotesize
+                \DontPrintSemicolon
+                % \SetAlgoLined
+                % \SetNoline
+                
+                \SetKwInOut{Input}{Input}
+                \SetKwInOut{Output}{Output}
+                
+                \Input{$G$, $s$ \Comment*[r]{Graph $G$ and a source node $s$}}
+                \Output{All nodes reachable from $s$}
+                
+                % \BlankLine
+                $Q \gets \varnothing$ \Comment*[r]{Create an empty queue}
+                $V \gets \varnothing$ \Comment*[r]{Create an empty set of visited}
+                $enqueue(Q, s)$\;
+                $append(V, s)$\;
+                
+                \While{$Q \neq \varnothing$}{
+                    $v \gets dequeue(Q)$\;
+                    $print(v)$\;
+
+                    \ForEach{$u \in N(v)$}{ % \Comment*[r]{process all neighbors of node $u$}
+                        \If{$u \notin V$}{
+                            $append(V, u)$\;
+                            $enqueue(Q, u)$
+                        }
                     }
                 }
-            }
-            % \Return max\;
-            \caption{My algorithm.}
-            % \label{tab:algorithm}
-        \end{algorithm}
-        
-        \begin{note}
-            {Introduce your self}
-        \end{note}
-    \end{frame}
+                % \Return max\;
+                \caption{My algorithm.}
+                % \label{tab:algorithm}
+            \end{algorithm}
+            
+            \begin{note}
+                {Introduce your self}
+            \end{note}
+        \end{frame}
 
-\subsection{Tables}
-    \begin{frame}{Table}
-        \begin{table}[htp!]
-            % \scriptsize
-            \centering
-            \caption{My table.}
-            % \label{tab:table1}
-            \begin{tabular}{ll}\toprule
-                Representation & Complexity \\\midrule
-                Adjacency matrix & $O(|V|^2)$ \\
-                Adjacency list & $O(|V| + |E|)$ \\
-                Edge list & $O(|E|)$ \\
-                Incidence matrix & $O(|V||E|)$ \\\bottomrule
-            \end{tabular}
-        \end{table}
+    \subsection{Tables}
+        \begin{frame}{Table}
+            \begin{table}[htp!]
+                % \scriptsize
+                \centering
+                \caption{My table.}
+                % \label{tab:table1}
+                \begin{tabular}{ll}\toprule
+                    Representation & Complexity \\\midrule
+                    Adjacency matrix & $O(|V|^2)$ \\
+                    Adjacency list & $O(|V| + |E|)$ \\
+                    Edge list & $O(|E|)$ \\
+                    Incidence matrix & $O(|V||E|)$ \\\bottomrule
+                \end{tabular}
+            \end{table}
 
-        \begin{note}
-            {Write your notes here}
-        \end{note}
-    \end{frame}
+            \begin{note}
+                {Write your notes here}
+            \end{note}
+        \end{frame}
 
-    \begin{frame}{Table (custom)}
-        \begin{table}[htp!]
-            \scriptsize
-            \centering
-            \caption{My table.}
-            % \label{tab:table1}
-            \begin{tabular}{p{2.2cm}p{4cm}p{4cm}}\toprule
-                Representation & Advantages & Disadvantages \\\midrule
-                Adjacency matrix & Simple structure, constant-time edge lookup. & High memory usage for large sparse graphs. \\
-                Adjacency list & Memory efficient for sparse graphs, easy to iterate over neighbors. & Edge existence check may be slower. \\
-                Edge list & Very simple representation, useful for algorithms that process edges sequentially. & Inefficient for neighbor queries.  \\
-                Incidence matrix & Useful in some theoretical formulations and algebraic graph analysis. & High memory usage and rarely used in practical implementations. \\\bottomrule
-            \end{tabular}
-        \end{table}
+        \begin{frame}{Table (custom)}
+            \begin{table}[htp!]
+                \scriptsize
+                \centering
+                \caption{My table.}
+                % \label{tab:table1}
+                \begin{tabular}{p{2.2cm}p{4cm}p{4cm}}\toprule
+                    Representation & Advantages & Disadvantages \\\midrule
+                    Adjacency matrix & Simple structure, constant-time edge lookup. & High memory usage for large sparse graphs. \\
+                    Adjacency list & Memory efficient for sparse graphs, easy to iterate over neighbors. & Edge existence check may be slower. \\
+                    Edge list & Very simple representation, useful for algorithms that process edges sequentially. & Inefficient for neighbor queries.  \\
+                    Incidence matrix & Useful in some theoretical formulations and algebraic graph analysis. & High memory usage and rarely used in practical implementations. \\\bottomrule
+                \end{tabular}
+            \end{table}
 
-        \begin{note}
-            {Write your notes here}
-        \end{note}
-    \end{frame}
+            \begin{note}
+                {Write your notes here}
+            \end{note}
+        \end{frame}
 
-    \begin{frame}{Table (custom)}
-        \begin{table}[htp!]
-            % \scriptsize
-            \centering
-            \caption{My table.}
-            % \label{tab:table1}
-            \begin{tabular}{c|c}
-                IA & Tasks \\
-                \hline
-                AI learns patterns & AI automates tasks \\
-                AI processes data & AI supports decisions \\
-                AI powers assistants & AI transforms industries \\
-                AI evolves & AI predicts \\
-            \end{tabular}
-        \end{table}
+        \begin{frame}{Table (custom)}
+            \begin{table}[htp!]
+                % \scriptsize
+                \centering
+                \caption{My table.}
+                % \label{tab:table1}
+                \begin{tabular}{c|c}
+                    IA & Tasks \\
+                    \hline
+                    AI learns patterns & AI automates tasks \\
+                    AI processes data & AI supports decisions \\
+                    AI powers assistants & AI transforms industries \\
+                    AI evolves & AI predicts \\
+                \end{tabular}
+            \end{table}
 
-        \begin{note}
-            {Write your notes here}
-        \end{note}
-    \end{frame}
+            \begin{note}
+                {Write your notes here}
+            \end{note}
+        \end{frame}
 
-\subsection{Figures}
-    \begin{frame}{Figure}
-        \begin{figure}[htp!]
-            \centering
-            \includegraphics[
-                width=0.3\linewidth,
-                trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                clip
-            ]{pic/default_image.png}
-            \caption{My image.}
-            \source{Author, 2024.}
-            % \label{fig:my_image}
-        \end{figure}
-
-        \begin{note}
-            {Write your notes here}
-        \end{note}
-    \end{frame}
-
-    \begin{frame}{Multiple figures}
-        \begin{figure}
-            \centering
-            \begin{subfigure}{0.2\textwidth}
+    \subsection{Figures}
+        \begin{frame}{Figure}
+            \begin{figure}[htp!]
                 \centering
                 \includegraphics[
-                    width=\linewidth,
+                    width=0.3\linewidth,
                     trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
                     clip
                 ]{pic/default_image.png}
                 \caption{My image.}
-                % \source{Author, 2024.}
-            \end{subfigure}
-            \hfill
-            \begin{subfigure}{0.2\textwidth}
+                \source{Author, 2024.}
+                % \label{fig:my_image}
+            \end{figure}
+
+            \begin{note}
+                {Write your notes here}
+            \end{note}
+        \end{frame}
+
+        \begin{frame}{Multiple figures 1}
+            \begin{figure}
                 \centering
-                \includegraphics[
-                    width=\linewidth,
-                    trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                    clip
-                ]{pic/default_image.png}
+                \begin{subfigure}{0.2\textwidth}
+                    \centering
+                    \includegraphics[
+                        width=\linewidth,
+                        trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                        clip
+                    ]{pic/default_image.png}
+                    \caption{My image.}
+                    % \source{Author, 2024.}
+                \end{subfigure}
+                \hfill
+                \begin{subfigure}{0.2\textwidth}
+                    \centering
+                    \includegraphics[
+                        width=\linewidth,
+                        trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                        clip
+                    ]{pic/default_image.png}
+                    \caption{My image.}
+                    % \source{Author, 2024.}
+                \end{subfigure}
+                \hfill
+                \begin{subfigure}{0.2\textwidth}
+                    \centering
+                    \includegraphics[
+                        width=\linewidth,
+                        trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                        clip
+                    ]{pic/default_image.png}
+                    \caption{My image.}
+                    % \source{Author, 2024.}
+                \end{subfigure}
+                \hfill
+                \begin{subfigure}{0.2\textwidth}
+                    \centering
+                    \includegraphics[
+                        width=\linewidth,
+                        trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                        clip
+                    ]{pic/default_image.png}
+                    \caption{My image.}
+                    % \source{Author, 2024.}
+                \end{subfigure}
                 \caption{My image.}
-                % \source{Author, 2024.}
-            \end{subfigure}
-            \hfill
-            \begin{subfigure}{0.2\textwidth}
+                \source{Author, 2024.}
+                % \label{fig:my_image}
+            \end{figure}
+
+            \begin{note}
+                {Write your notes here}
+            \end{note}
+        \end{frame}
+
+        \begin{frame}{Multiple figures 2}
+            \begin{figure}
                 \centering
-                \includegraphics[
-                    width=\linewidth,
-                    trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                    clip
-                ]{pic/default_image.png}
+                % Left column: contains two vertically stacked subfigure
+                \begin{minipage}{0.5\textwidth}
+                    \centering
+                    \begin{subfigure}{\textwidth}
+                        \centering
+                        \includegraphics[
+                            width=0.3\linewidth,
+                            trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                            clip
+                        ]{pic/default_image.png}
+                        \caption{My image.}
+                        \source{Author, 2024.}
+                        % \label{fig:my_image}
+                    \end{subfigure}
+                    \vspace{0.5em}
+                    \begin{subfigure}{\textwidth}
+                        \centering
+                        \includegraphics[
+                            width=0.3\linewidth,
+                            trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                            clip
+                        ]{pic/default_image.png}
+                        \caption{My image.}
+                        \source{Author, 2024.}
+                        % \label{fig:my_image}
+                    \end{subfigure}
+                \end{minipage}
+                \hfill
+                % Right column: contains one larger subfigure
+                \begin{minipage}{0.45\textwidth}
+                    \centering
+                    \begin{subfigure}{\textwidth}
+                        \centering
+                        \includegraphics[
+                            width=0.8\linewidth,
+                            trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                            clip
+                        ]{pic/default_image.png}
+                        \caption{My image.}
+                    \source{Author, 2024.}
+                    % \label{fig:my_image}
+                    \end{subfigure}
+                \end{minipage}
                 \caption{My image.}
-                % \source{Author, 2024.}
-            \end{subfigure}
-            \hfill
-            \begin{subfigure}{0.2\textwidth}
+                \source{Author, 2024.}
+                % \label{fig:my_image}
+            \end{figure}
+
+            \begin{note}
+                {Write your notes here}
+            \end{note}
+        \end{frame}
+
+        \begin{frame}{Figure (dynamic)}
+            \begin{figure}
                 \centering
-                \includegraphics[
-                    width=\linewidth,
-                    trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                    clip
-                ]{pic/default_image.png}
+                \animategraphics[width=\textwidth,loop,autoplay]
+                {5} % frame rate
+                {pic/imd/freiburg_matches-} % path to figures
+                {0} % start index
+                {15} % end index
                 \caption{My image.}
-                % \source{Author, 2024.}
-            \end{subfigure}
-            \caption{My image.}
-            \source{Author, 2024.}
-            % \label{fig:my_image}
-        \end{figure}
+                \source{Author, 2024.}
+                % \label{fig:my_image}
+            \end{figure}
 
-        \begin{note}
-            {Write your notes here}
-        \end{note}
-    \end{frame}
+            \begin{note}
+                {Write your notes here}
+            \end{note}
+        \end{frame}
 
-    \begin{frame}{Figure (dynamic)}
-        \begin{figure}
-            \centering
-            \animategraphics[width=\textwidth,loop,autoplay]
-            {5} % frame rate
-            {pic/imd/freiburg_matches-} % path to figures
-            {0} % start index
-            {15} % end index
-            \caption{My image.}
-            \source{Author, 2024.}
-            % \label{fig:my_image}
-        \end{figure}
+    \subsection{Others}
+        \begin{frame}{Blocks 1}
+            \begin{block}{Info}
+                General content
+            \end{block}
 
-        \begin{note}
-            {Write your notes here}
-        \end{note}
-    \end{frame}
+            \begin{alertblock}{Warning}
+                Important message
+            \end{alertblock}
 
-\subsection{Others}
-    \begin{frame}{Blocks 1}
-        \begin{block}{Info}
-            General content
-        \end{block}
+            \begin{exampleblock}{Example}
+                Example content
+            \end{exampleblock}
 
-        \begin{alertblock}{Warning}
-            Important message
-        \end{alertblock}
+            \begin{definition}
+                Example definition
+            \end{definition}
 
-        \begin{exampleblock}{Example}
-            Example content
-        \end{exampleblock}
+            \begin{example}
+                Example content
+            \end{example}
 
-        \begin{definition}
-            Example definition
-        \end{definition}
+            \begin{note}
+                {Write your notes here}
+            \end{note}
+        \end{frame}
 
-        \begin{example}
-            Example content
-        \end{example}
+        \begin{frame}{Blocks 2}
+            \begin{theorem}[Pythagoras] 
+                $a^2 + b^2 = c^2$
+            \end{theorem}
 
-        \begin{note}
-            {Write your notes here}
-        \end{note}
-    \end{frame}
+            \begin{corollary}
+                $x + y = y + x$
+            \end{corollary}
 
-    \begin{frame}{Blocks 2}
-        \begin{theorem}[Pythagoras] 
-            $a^2 + b^2 = c^2$
-        \end{theorem}
+            \begin{proof}
+                $\omega + \phi = \epsilon$
+            \end{proof}
 
-        \begin{corollary}
-            $x + y = y + x$
-        \end{corollary}
+            \begin{note}
+                {Write your notes here}
+            \end{note}
+        \end{frame}
 
-        \begin{proof}
-            $\omega + \phi = \epsilon$
-        \end{proof}
-
-        \begin{note}
-            {Write your notes here}
-        \end{note}
-    \end{frame}
-
-    \begin{frame}{Frame (Two columns)}
-        \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
-            \begin{column}{0.45\textwidth}
-                \begin{itemize}
-                    \item \alert{Graph traversal}
+        \begin{frame}{Frame (Two columns)}
+            \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
+                \begin{column}{0.5\textwidth}
+                    \hspace{0.2cm} Se enfoca solo en:
                     \begin{itemize}
-                        \item Breadth-First Search
-                        \item Depth-First Search
+                        \item Números (notas)
+                        \item Operaciones matemáticas
                     \end{itemize}
-                \end{itemize}
-            \end{column}
-            \begin{column}{0.55\textwidth}
-                \begin{itemize}
-                    \item \alert{Shortest path algorithms}
+                \end{column}
+                
+                \begin{column}{0.5\textwidth}
+                    Se ignora:
                     \begin{itemize}
-                        \item Dijkstra
-                        \item Floyd–Warshall
-                        \item Bellman-Ford
+                        \item Nombres de cursos
+                        \item Detalles del estudiante
                     \end{itemize}
-                \end{itemize}
-            \end{column}
-        \end{columns}
+                \end{column}
+            \end{columns}
 
-        \begin{note}
-            {Introduce your self}
-        \end{note}
-    \end{frame}
+            \begin{note}
+                {Introduce your self}
+            \end{note}
+        \end{frame}
 
-    \begin{frame}{Frame (Three columns)}
-        \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
-            \begin{column}{0.33\textwidth}
-                \begin{itemize}
-                    \item \alert{Node-level}
+        \begin{frame}{Frame (Two columns (list of list))}
+            \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
+                \begin{column}{0.45\textwidth}
                     \begin{itemize}
-                        \item Degree
-                        \item Degree centrality
-                        \item Closeness centrality
-                        \item Betweenness centrality
-                        % \item Centrality
-                        \item Eccentricity
+                        \item \alert{Graph traversal}
+                        \begin{itemize}
+                            \item Breadth-First Search
+                            \item Depth-First Search
+                        \end{itemize}
                     \end{itemize}
-                \end{itemize}
-            \end{column}
-            \begin{column}{0.33\textwidth}
-                \begin{itemize}
-                    \item \alert{Edge-level}
+                \end{column}
+                \begin{column}{0.55\textwidth}
                     \begin{itemize}
-                        \item Shortest path
-                        \item Betweenness centrality
-                        \item Distance
+                        \item \alert{Shortest path algorithms}
+                        \begin{itemize}
+                            \item Dijkstra
+                            \item Floyd–Warshall
+                            \item Bellman-Ford
+                        \end{itemize}
                     \end{itemize}
-                \end{itemize}
-            \end{column}
-            \begin{column}{0.33\textwidth}
-                \begin{itemize}
-                    \item \alert{Graph-level}
-                    \begin{itemize}
-                        \item Order
-                        \item Size
-                        \item Density
-                        \item Diameter
-                        \item Radius
-                        % \item Average path
-                        \item Clustering coefficient
-                        \item Modularity
-                    \end{itemize}
-                \end{itemize}
-            \end{column}
-        \end{columns}
+                \end{column}
+            \end{columns}
 
-        \begin{note}
-            {Introduce your self}
-        \end{note}
-    \end{frame}
+            \begin{note}
+                {Introduce your self}
+            \end{note}
+        \end{frame}
+
+        \begin{frame}{Frame (Three columns)}
+            \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
+                \begin{column}{0.33\textwidth}
+                    \begin{itemize}
+                        \item \alert{Node-level}
+                        \begin{itemize}
+                            \item Degree
+                            \item Degree centrality
+                            \item Closeness centrality
+                            \item Betweenness centrality
+                            % \item Centrality
+                            \item Eccentricity
+                        \end{itemize}
+                    \end{itemize}
+                \end{column}
+                \begin{column}{0.33\textwidth}
+                    \begin{itemize}
+                        \item \alert{Edge-level}
+                        \begin{itemize}
+                            \item Shortest path
+                            \item Betweenness centrality
+                            \item Distance
+                        \end{itemize}
+                    \end{itemize}
+                \end{column}
+                \begin{column}{0.33\textwidth}
+                    \begin{itemize}
+                        \item \alert{Graph-level}
+                        \begin{itemize}
+                            \item Order
+                            \item Size
+                            \item Density
+                            \item Diameter
+                            \item Radius
+                            % \item Average path
+                            \item Clustering coefficient
+                            \item Modularity
+                        \end{itemize}
+                    \end{itemize}
+                \end{column}
+            \end{columns}
+
+            \begin{note}
+                {Introduce your self}
+            \end{note}
+        \end{frame}
 
 \section{Examples}
     \begin{frame}{Example 1}
@@ -606,7 +688,7 @@
         \begin{figure}[htp!]
             \centering
             \includegraphics[
-                width=0.3\linewidth,
+                width=0.2\linewidth,
                 trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
                 clip
             ]{pic/default_image.png}
@@ -649,7 +731,7 @@
 
         \begin{figure}
             \centering
-            \begin{subfigure}{0.2\textwidth}
+            \begin{subfigure}{0.15\textwidth}
                 \centering
                 \includegraphics[
                     width=\linewidth,
@@ -661,7 +743,7 @@
             \end{subfigure}
             % \hfill
             \hspace{1cm}
-            \begin{subfigure}{0.2\textwidth}
+            \begin{subfigure}{0.15\textwidth}
                 \centering
                 \includegraphics[
                     width=\linewidth,
@@ -894,7 +976,7 @@
                 \begin{figure}[htp!]
                     \centering
                     \includegraphics[
-                        width=1.0\linewidth,
+                        width=0.8\linewidth,
                         trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
                         clip
                     ]{pic/default_image.png}
@@ -904,10 +986,6 @@
                 \end{figure}
             \end{column}
         \end{columns}
-        
-        \begin{note}
-            {Introduce your self}
-        \end{note}
         
         \begin{note}
             {Introduce your self}
@@ -944,10 +1022,6 @@
             \item Web: most linked pages.
         \end{itemize}
 
-        \begin{note}
-            {Introduce your self}
-        \end{note}
-        
         \begin{note}
             {Introduce your self}
         \end{note}
@@ -1000,6 +1074,152 @@
         
         \begin{note}
             {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Example 15}
+        \begin{exampleblock}{Descomposición}
+            Consiste en \alert{dividir} el problema en sub problemas o en partes más pequeñas (unidades lógicas de menor complejidad); luego, solucionar cada sub problema independientemente. Finalmente, las soluciones a los subproblemas se integran para resolver el problema original completo. \\
+        \end{exampleblock}
+
+        \alertplain{Ejemplo:} Sistema para el cálculo de promedio de notas. \newline
+
+        Dividir el problema en:
+        \begin{enumerate}
+            \item Ingresar notas
+            \item Calcular suma
+            \item Calcular promedio
+            \item Mostrar resultado
+        \end{enumerate}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Example 16}
+        \begin{exampleblock}{Abstracción}
+            Consiste en la capacidad de identificar los aspectos más importantes de un problema o situación y reducir la complejidad al enfocarse en las partes más relevantes, ignorando los detalles innecesarios. En otras palabras, abstraer implica crear una \alert{representación  simplificada} de un problema, modelo o sistema, lo cual facilita su comprensión, análisis y resolución. \\
+        \end{exampleblock}
+
+        \alertplain{Ejemplo:} Sistema para el cálculo de promedio de notas. \newline
+
+        \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
+            \begin{column}{0.5\textwidth}
+                \hspace{0.2cm} Se enfoca solo en:
+                \begin{itemize}
+                    \item Números (notas)
+                    \item Operaciones matemáticas
+                \end{itemize}
+            \end{column}
+            
+            \begin{column}{0.5\textwidth}
+                Se ignora:
+                \begin{itemize}
+                    \item Nombres de cursos
+                    \item Detalles del estudiante
+                \end{itemize}
+            \end{column}
+        \end{columns}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Example 17}
+        \begin{exampleblock}{Diseño de algoritmo}
+            Es la capacidad de descomponer un problema en una secuencia de pasos lógicos o instrucciones claras que pueden ser ejecutadas para solucionar un problema. En otras palabras, es el proceso de \alert{crear}, \alert{diseñar} y \alert{evaluar} algoritmos que resuelven problemas de manera eficiente. \\  % Es un componente central del pensamiento computacional, pero también es una habilidad útil en diversas disciplinas. \\
+        \end{exampleblock}
+
+        \alertplain{Ejemplo:} Sistema para el cálculo de promedio de notas. \newline
+
+        \begin{algorithm}[H]
+            % \scriptsize % \footnotesize
+            \DontPrintSemicolon
+            % \SetAlgoLined
+            % \SetNoline
+            
+            \SetKwInOut{Input}{Input}
+            \SetKwInOut{Output}{Output}
+            
+            \Input{$nota_1$, $nota_2$ y $nota_3$ \Comment*[r]{Notas del estudiante}}
+            \Output{$promedio$}
+            
+            % \BlankLine
+            $suma \gets nota_1 + nota_2 + nota_3$
+            
+            $promedio \gets \frac{suma}{3}$ 
+            \Comment*[r]{Cálculo del promedio}
+
+            $\text{Mostrar} \: promedio$
+            % \Return max\;
+            \caption{Promedio de notas.}
+            % \label{tab:algorithm}
+        \end{algorithm}
+    
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Example 18}
+        \begin{exampleblock}{Secuenciales}
+            En este tipo de estructura las instrucciones se realizan o se ejecutan una después de la otra.
+        \end{exampleblock}
+
+        \begin{figure}
+            \centering
+            % Left column: contains two vertically stacked subfigure
+            \begin{minipage}{0.5\textwidth}
+                \centering
+                \begin{subfigure}{\textwidth}
+                    \centering
+                    \includegraphics[
+                        width=0.2\linewidth,
+                        trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                        clip
+                    ]{pic/default_image.png}
+                    \caption{My image.}
+                    \source{Author, 2024.}
+                    % \label{fig:my_image}
+                \end{subfigure}
+                \vspace{0.5em}
+                \begin{subfigure}{\textwidth}
+                    \centering
+                    \includegraphics[
+                        width=0.2\linewidth,
+                        trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                        clip
+                    ]{pic/default_image.png}
+                    \caption{My image.}
+                    \source{Author, 2024.}
+                    % \label{fig:my_image}
+                \end{subfigure}
+            \end{minipage}
+            \hfill
+            % Right column: contains one larger subfigure
+            \begin{minipage}{0.45\textwidth}
+                \centering
+                \begin{subfigure}{\textwidth}
+                    \centering
+                    \includegraphics[
+                        width=0.6\linewidth,
+                        trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                        clip
+                    ]{pic/default_image.png}
+                    \caption{My image.}
+                \source{Author, 2024.}
+                % \label{fig:my_image}
+                \end{subfigure}
+            \end{minipage}
+            \caption{My image.}
+            \source{Author, 2024.}
+            % \label{fig:my_image}
+        \end{figure}
+
+        \begin{note}
+            {Write your notes here}
         \end{note}
     \end{frame}
 
