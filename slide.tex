@@ -7,7 +7,10 @@
 
 % Other packages
 \usepackage{latexsym,xcolor,multicol,booktabs,calligra}
-\usepackage{amssymb,amsfonts,amsmath,amsthm,mathrsfs,mathptmx} % Common math packages
+% \usepackage{amssymb,amsfonts,amsmath,amsthm,mathrsfs,mathptmx} % Common math packages
+\usepackage{amsmath,amssymb,amsfonts,mathrsfs} % Best mathematical packages
+\usepackage{newtxtext,newtxmath} % Times-like font package for text and mathematics
+
 \usepackage{graphicx,pstricks,listings,stackengine}
 \usefonttheme[onlymath]{serif} % Use serif font for equations (better appearance)
 
@@ -26,6 +29,7 @@
     skip=5pt, % Space between figure and caption
     belowskip=0pt % Space below the caption (reduces gap after caption)
 }
+\usepackage{forest}
 
 % Adjusts horizontal margins of the slide content
 % \setbeamersize{
@@ -45,20 +49,20 @@
 
 \title[Title of Presentation]{Title of Presentation}
 % Custom title template with a styled box
-% \setbeamertemplate{title}{
-%     \makebox[\textwidth]{ % force horizontal centering
-%         \begin{beamercolorbox}[
-%             wd=0.9\textwidth,
-%             sep=5pt,
-%             center,
-%             rounded=true,
-%             shadow=false
-%         ]{title}
-%             \usebeamerfont{title}
-%             \inserttitle
-%         \end{beamercolorbox}
-%     }
-% }
+\setbeamertemplate{title}{
+    \makebox[\textwidth]{ % force horizontal centering
+        \begin{beamercolorbox}[
+            wd=1.0\textwidth,
+            sep=1pt,
+            center,
+            rounded=true,
+            shadow=false
+        ]{title}
+            \usebeamerfont{title}
+            \inserttitle
+        \end{beamercolorbox}
+    }
+}
 
 % \subtitle{Jiangnan University Academic Report Beamer Template}
 %% \institute[JNU]{\normalsize{\inst{1} School of Business \quad Jiangnan University \quad \textit{****@qq.com}}}
@@ -132,7 +136,7 @@
             \end{note}
         \end{frame}
 
-        \begin{frame}{List of list}
+        \begin{frame}{List of list (1)}
             \begin{itemize}
                 \item Install requirements
                     \begin{itemize}
@@ -156,6 +160,43 @@
                                 \beamergotobutton{\faGoogle\ Open in Google Colab}
                             }
                     \end{itemize}
+            \end{itemize}
+
+            \begin{note}
+                {Write your notes here}
+            \end{note}
+        \end{frame}
+
+        \begin{frame}{List of list (2)}
+            \begin{itemize}
+                \item Word embeddings
+                \begin{itemize}
+                    \item Word2vec
+                    \begin{itemize}
+                        \item \alert{Skip-Gram}
+                        \item Continuous Bag of Words (CBOW)
+                    \end{itemize}
+                \end{itemize}
+                \item Graph embeddings
+                \begin{itemize}
+                    \item Shallow embeddings
+                    \begin{itemize}
+                        \item DeepWalk
+                        \item \alert{Node2vec}
+                        \item Struc2vec
+                        \item Structural Deep Network Embedding (SDNE)
+                        \item Metapath2vec
+                    \end{itemize}
+                    \item Graph Neural Networks (GNN)
+                    \begin{itemize}
+                        \item Graph Convolutional Networks (GCN)
+                        \item Graph Attention Networks (GAT)
+                        \item Graph Isomorphism Networks (GIN)
+                        \item GraphSAGE
+                        \item Graph Autoencoders (GAE)
+                        % \item Graph Transformers
+                    \end{itemize}
+                \end{itemize}
             \end{itemize}
 
             \begin{note}
@@ -285,7 +326,7 @@
 
         \begin{frame}{Algorithms}
             \begin{algorithm}[H]
-                % \scriptsize % \footnotesize
+                \small % \scriptsize \footnotesize \small
                 \DontPrintSemicolon
                 % \SetAlgoLined
                 % \SetNoline
@@ -579,7 +620,7 @@
             \end{note}
         \end{frame}
 
-        \begin{frame}{Frame (Two columns)}
+        \begin{frame}{Frame (two columns)}
             \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
                 \begin{column}{0.5\textwidth}
                     \hspace{0.2cm} Se enfoca solo en:
@@ -603,7 +644,7 @@
             \end{note}
         \end{frame}
 
-        \begin{frame}{Frame (Two columns (list of list))}
+        \begin{frame}{Frame (two columns (list of list))}
             \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
                 \begin{column}{0.45\textwidth}
                     \begin{itemize}
@@ -631,7 +672,7 @@
             \end{note}
         \end{frame}
 
-        \begin{frame}{Frame (Three columns)}
+        \begin{frame}{Frame (three columns)}
             \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
                 \begin{column}{0.33\textwidth}
                     \begin{itemize}
@@ -678,6 +719,44 @@
             \end{note}
         \end{frame}
 
+        \begin{frame}{Tree}
+            \begin{center}
+                \begin{forest}
+                    for tree={
+                        grow'=south,        % Top-to-bottom tree layout
+                        draw,               % Draw node borders
+                        rounded corners,    % Rounded box style
+                        align=center,       % Center node text
+                        edge={->},          % Directed edges with arrows
+                        l sep=15pt,         % Vertical spacing between levels
+                        s sep=12pt,         % Horizontal spacing between siblings
+                        inner sep=6pt,      % Internal padding of nodes
+                        fill=blue!10        % Light blue background for nodes
+                    }
+                    [Graph Machine Learning
+                        [Representation Learning
+                            [Graph Embeddings
+                                [Shallow Methods
+                                    [DeepWalk]
+                                    [Node2Vec]
+                                    [LINE]
+                                ]
+                                [GNN-based
+                                    [GCN]
+                                    [GAT]
+                                    [GraphSAGE]
+                                ]
+                            ]
+                        ]
+                    ]
+                \end{forest}
+            \end{center}
+
+            \begin{note}
+                {Write your notes here}
+            \end{note}
+        \end{frame}
+
 \section{Examples}
     \begin{frame}{Example 1}
         In mathematics and computer science, a graph (network) is defined as $G = (V, E)$, where $V = \{v_1, v_2, ..., v_{n}\}$ is the nodes (or \textit{vertices}, or \textit{points}) set and $E = \{e_1, e_2, ..., e_{m}\}, e_i \in V \times V$ a set of edges (or \textit{lines}, or \textit{arcs}) formed by unordered pairs of nodes. \newline
@@ -707,10 +786,18 @@
         
         \begin{alertblock}{Neighborhood}
             \begin{equation}
-                N(v) = \{w \in V ∣ v \neq w \land (v, w) \in E\}
+                N(v) = \{w \in V \mid v \neq w \land (v, w) \in E\}
                 % \label{eq:my_equation}
             \end{equation}
         \end{alertblock}
+
+        \alert{Backward propagation} computes the gradients of the loss $\mathcal{L}$ or $\mathscr{L}$ and updates the parameters using gradient descent.
+        \begin{align}
+            W^{(l)} = W^{(l)} - \eta \frac{\partial \mathcal{L}}{\partial W^{(l)}} \\
+            b^{(l)} = b^{(l)} - \eta \frac{\partial \mathcal{L}}{\partial b^{(l)}}
+        \end{align}
+
+        \alert{Sum operator}: $z_{uv} = z_u + z_v \in \mathbb{R}^d$.
 
         \begin{note}
             {Introduce your self}
