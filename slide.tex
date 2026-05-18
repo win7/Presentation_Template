@@ -30,6 +30,7 @@
     belowskip=0pt % Space below the caption (reduces gap after caption)
 }
 \usepackage{forest}
+\usepackage[table]{xcolor}
 
 % Adjusts horizontal margins of the slide content
 % \setbeamersize{
@@ -1310,13 +1311,74 @@
         \end{note}
     \end{frame}
 
+    \begin{frame}{Example 19}
+        \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
+            \begin{column}{0.4\textwidth}
+                \begin{table}[htp!]
+                    \scriptsize
+                    \centering
+                    \caption{Node aligment (\textit{secoSanMartin}).}
+                    % \label{tab:table1}
+                    \begin{tabular}{rl}\toprule
+                        ID 1 & ID 2 \\\midrule
+                        \rowcolor{yellow}
+                        13 & 13 \\
+                        19 & 252 \\
+                        27 & 378 \\
+                        31 & 1148 \\
+                        \rowcolor{yellow}
+                        38 & 38 \\
+                        43 & 273 \\
+                        49 & 72 \\
+                        \rowcolor{yellow}
+                        50 & 50 \\
+                        51 & 366 \\
+                        53 & 241 \\
+                        73 & 270 \\
+                        ... & ... \\
+                        1825 & 1726 \\\bottomrule
+                    \end{tabular}
+                \end{table}
+            \end{column}
+            
+            \begin{column}{0.6\textwidth}
+                \begin{table}[htp!]
+                    \scriptsize
+                    \centering
+                    \caption{Node filtered \textbf{133/2072} (\textit{secoSanMartin}).}
+                    % \label{tab:table1}
+                    \begin{tabular}{lrrl}\toprule
+                        ID & Rt & Mz & Metabolite name \\\midrule
+                        13 & 6.10 & 281.05 & Unknown \\
+                        38 & 6.16 & 182.10 & Unknown \\
+                        50 & 6.20 & 354.10 & Unknown \\
+                        128 & 6.47 & 119.20 & Unknown \\
+                        184 & 6.76 & 341.14 & Unknown \\
+                        261 & 7.23 & 371.06 & Unknown \\
+                        272 & 7.29 & 327.01 & Unknown \\
+                        314 & 7.61 & 57.02 & DECANE; EI-B; MS \\
+                        336 & 7.77 & 53.96 & Unknown \\
+                        339 & 7.81 & 328.01 & Unknown \\
+                        400 & 8.31 & 109.08 & CITRONELLYL ACETATE... \\ %; EI-B; MS \\
+                        402 & 8.31 & 109.13 & BETA-HOMOCYCLOCITRAL... \\ %; EI-B; MS \\
+                        407 & 8.37 & 401.11 & Unknown \\\bottomrule
+                    \end{tabular}
+                \end{table}
+            \end{column}
+        \end{columns}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
 \section*{References}
     \begin{frame}
         \begin{center}
             {\Huge\calligra Thanks!} \\
             % {\Huge\textit{Thank you for your attention!}}\\
             {\Huge $\infty$} \\
-            % edwin.alvarez@pucp.edu.pe\\
+            % edwin.alvarez@pucp.edu.pe \\
             \url{https://github.com/win7}
         \end{center}
     \end{frame}
