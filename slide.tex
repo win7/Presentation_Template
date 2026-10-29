@@ -44,6 +44,12 @@
 \renewcommand{\alert}[1]{\textbf{\color{swufe}#1}}
 \newcommand{\alertplain}[1]{{\color{swufe}#1}}
 
+% Hidden content
+% Define the variable (creates \ifshow, \showtrue, and \showfalse automatically)
+\newif\ifshow
+% Set it to true
+\showfalse 
+
 % Title page setup
 % \author{Lu** \inst{1}, Zhang** \inst{1}}
 \author[Topics]{Topics}
@@ -797,7 +803,7 @@
         
         \begin{alertblock}{Neighborhood}
             \begin{equation}
-                N(v) = \{w \in V \mid v \neq w \land (v, w) \in E\}
+                \mathcal{N}(v) = \{w \in V \mid v \neq w \land (v, w) \in E\}
                 % \label{eq:my_equation}
             \end{equation}
         \end{alertblock}
@@ -832,7 +838,7 @@
             \begin{subfigure}{0.15\textwidth}
                 \centering
                 \includegraphics[
-                    width=\linewidth,
+                    width=1.0\linewidth,
                     trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
                     clip
                 ]{pic/default_image.png}
@@ -844,7 +850,7 @@
             \begin{subfigure}{0.15\textwidth}
                 \centering
                 \includegraphics[
-                    width=\linewidth,
+                    width=1.0\linewidth,
                     trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
                     clip
                 ]{pic/default_image.png}
@@ -1026,6 +1032,7 @@
         \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
             \begin{column}{0.6\textwidth}
                 \begin{table}[htp!]
+                    % \scriptsize
                     \centering
                     \caption{My table.}
                     % \label{tab:table1}
@@ -1374,6 +1381,40 @@
                         407 & 8.37 & 401.11 & Unknown \\\bottomrule
                     \end{tabular}
                 \end{table}
+            \end{column}
+        \end{columns}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Example 20}
+        \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
+            \begin{column}{0.6\textwidth}
+                \begin{align*}
+                    \mathbf{X} &= \begin{bmatrix}
+                        x^{(1)}_{1} & \cdots & x^{(1)}_{n} \\
+                        \vdots & \ddots & \vdots \\
+                        x^{(m)}_{1} & \cdots & x^{(m)}_{n}
+                    \end{bmatrix}, \quad \mathbf{X} \in \mathbb{R}^{m \times n} \\[5pt]
+                    \mathbf{y} &= \begin{bmatrix}
+                        y^{(1)} \\
+                        \vdots \\
+                        y^{(m)}
+                    \end{bmatrix}, \quad y \in \{\text{class}_1, \ldots, \text{class}_p\}
+                \end{align*}
+            \end{column}
+            \begin{column}{0.4\textwidth}
+                Donde:
+                \begin{flalign*}
+                    & m = \text{número de ejemplos / registros} & \\
+                    & n = \text{número de variable / características} & \\
+                    & x\text{'s} = \text{``input'' variable / características} & \\
+                    & y\text{'s} = \text{``output'' variable / variable ``target''} & \\
+                    & (x, y) = \text{un ejemplo de entrenamiento} & \\
+                    & (x^{(i)}, y^{(i)}) = \text{\textit{i}-esimo ejemplo de entrenamiento} &
+                \end{flalign*}
             \end{column}
         \end{columns}
 
