@@ -31,6 +31,9 @@
 }
 \usepackage{forest}
 \usepackage[table]{xcolor}
+\usepackage{minted}
+\usepackage{cancel} % For cancel in equations
+\usepackage{subdepth} % Improve sub indice
 
 % Adjusts horizontal margins of the slide content
 % \setbeamersize{
@@ -567,8 +570,22 @@
         \begin{frame}{Figure (dynamic)}
             \begin{figure}
                 \centering
-                \animategraphics[width=\textwidth,loop,autoplay]
-                {5} % frame rate
+                \animategraphics[
+                    width=0.9\textwidth,
+                    trim=0pt 0pt 0pt 0pt,       % crop: left bottom right top (adjust values as needed)
+                    clip,                       % required to apply the trim
+                    % controls={play,step},       % show only play/pause, step +/-1, and stop/reset
+                    controls={play,step,stop},  % show only play/pause, step +/-1, and stop/reset
+                    % controls,                 % show playback control buttons
+                    % buttonsize=1.2em,         % set control button size
+                    % buttonfg=0.2:0.2:0.2,     % dark gray color for button icons (RGB)
+                    % poster=first,             % show frame 0 as static fallback
+                    % palindrome,               % play forward and backward smoothly
+                    buttonsize=0.7em,           % reduce control button size (default is ~1.44em)
+                    % autoplay,                   % start animation automatically
+                    loop                        % continuous loop
+                ]
+                {5} % frame rate (fps)
                 {pic/imd/freiburg_matches-} % path to figures
                 {0} % start index
                 {15} % end index
@@ -1357,7 +1374,6 @@
                     \end{tabular}
                 \end{table}
             \end{column}
-            
             \begin{column}{0.6\textwidth}
                 \begin{table}[htp!]
                     \scriptsize
